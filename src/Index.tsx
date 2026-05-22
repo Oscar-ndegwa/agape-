@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
-import { squares, type Square } from "./lib/board-data";
+import React, { useEffect, useState } from "react";
+// This line fixes the red X issue by linking the data correctly:
+import { squares } from "./lib/board-data";
 
 const styles = `
   body.career-ladder-body { font-family: "Arial", sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); margin: 0; padding: 10px; min-height: 100vh; box-sizing: border-box; }
   .game-container { max-width: 1200px; margin: 0 auto; background: white; border-radius: 20px; padding: 15px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-  .game-board { display: grid; grid-template-columns: repeat(6, 1fr); gap: 15px; margin: 20px 0; }
+  .game-board { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin: 20px 0; }
   .square { border: 3px solid #bdc3c7; border-radius: 15px; padding: 12px 8px; cursor: pointer; background: #f8f9fa; text-align: center; }
   .bronze { background: linear-gradient(135deg, #cd7f32 0%, #a0522d 100%); color: white; }
   .silver { background: linear-gradient(135deg, #c0c0c0 0%, #808080 100%); color: white; }
